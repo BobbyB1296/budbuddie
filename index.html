@@ -3,281 +3,147 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Bud Buddie | Your Personal Cannabis Guide</title>
-
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
-
-html {
-    scroll-behavior: smooth;
+html{
+scroll-behavior:smooth;
 }
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    color: white;
-    background:
-        linear-gradient(
-            rgba(0,0,0,.75),
-            rgba(0,0,0,.80)
-        ),
-        url('background.PNG');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+body{
+font-family:Arial,Helvetica,sans-serif;
+color:white;
+background:
+linear-gradient(
+rgba(0,20,10,.35),
+rgba(0,15,10,.55)
+),
+url('background.PNG');
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+background-repeat:no-repeat;
+min-height:100vh;
 }
-
-.hero {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 40px 20px;
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+padding:60px 40px;
 }
-
-.hero-content {
-    max-width: 900px;
+.hero-content{
+max-width:650px;
 }
-
-.logo {
-    width: 220px;
-    max-width: 80%;
-    margin-bottom: 25px;
-}
-
-.hero h1 {
-    font-size: 4rem;
-    margin-bottom: 15px;
-    font-weight: 800;
-}
-
-.hero h2 {
-    color: #46e0c4;
-    font-size: 1.5rem;
-    margin-bottom: 30px;
-    font-weight: 400;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    max-width: 700px;
-    margin: 0 auto 40px;
-    color: #d7f8f0;
-}
-
-.button-group {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
-}
-
-.btn {
-    display: inline-block;
-    text-decoration: none;
-    padding: 15px 28px;
-    border-radius: 999px;
-    font-weight: bold;
-    transition: .3s ease;
-}
-
-.primary {
-    background: #e8ae6a;
-    color: #111;
-}
-
-.secondary {
-    border: 2px solid #46e0c4;
-    color: #46e0c4;
-}
-
-.btn:hover {
-    transform: translateY(-3px);
-}
-
-.section {
-    max-width: 1100px;
-    margin: auto;
-    padding: 80px 20px;
-}
-
-.section-title {
-    text-align: center;
-    font-size: 2.4rem;
-    margin-bottom: 40px;
-}
-
-.cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-    gap: 25px;
-}
-
-.card {
-    background: rgba(20, 30, 25, .72);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(70,224,196,.2);
-    border-radius: 20px;
-    padding: 30px;
-}
-
-.card h3 {
-    color: #46e0c4;
-    margin-bottom: 15px;
-}
-
-.card p {
-    line-height: 1.7;
-    color: #d7f8f0;
-}
-
-.mission {
-    text-align: center;
-    max-width: 850px;
-    margin: auto;
-    line-height: 1.9;
-    font-size: 1.1rem;
-}
-
-footer {
-    text-align: center;
-    padding: 50px 20px;
-    border-top: 1px solid rgba(255,255,255,.1);
-    color: #9ddfce;
-}
-
-@media(max-width:768px){
-
-.hero h1{
-    font-size:2.6rem;
-}
-
-.hero h2{
-    font-size:1.2rem;
-}
-
 .logo{
-    width:180px;
+width:280px;
+max-width:100%;
+margin-bottom:40px;
+display:block;
 }
-
+.intro{
+color:#32e6cf;
+font-size:1.15rem;
+line-height:2;
+margin-bottom:25px;
+}
+.hero h1{
+font-size:4.4rem;
+font-weight:800;
+line-height:1.05;
+margin-bottom:25px;
+}
+.hero-text{
+font-size:1.2rem;
+line-height:2;
+color:#e5fdf8;
+margin-bottom:40px;
+}
+.btn{
+display:inline-block;
+background:#e8ab67;
+color:#ffffff;
+padding:18px 38px;
+border-radius:999px;
+font-size:1.15rem;
+font-weight:bold;
+text-decoration:none;
+transition:.25s;
+}
+.btn:hover{
+transform:translateY(-3px);
+}
+.glass-section{
+margin:0 20px 80px;
+padding:40px;
+border-radius:24px;
+background:rgba(15,30,25,.45);
+backdrop-filter:blur(12px);
+border:1px solid rgba(50,230,207,.15);
+max-width:900px;
+}
+.glass-section h2{
+font-size:2rem;
+margin-bottom:20px;
+}
+.glass-section p{
+color:#d8fdf6;
+line-height:2;
+font-size:1.05rem;
+}
+footer{
+text-align:center;
+padding:60px 20px;
+color:#7fe9d6;
+}
+@media(max-width:768px){
+.hero{
+padding:40px 25px;
+}
+.logo{
+width:220px;
+}
+.hero h1{
+font-size:3rem;
+}
+.hero-text{
+font-size:1.05rem;
+}
+.glass-section{
+padding:30px;
+margin:0 15px 50px;
+}
 }
 </style>
 </head>
-
 <body>
-
 <section class="hero">
-
 <div class="hero-content">
-
-<img src="logo.PNG" alt="Bud Buddie Logo" class="logo">
-
-<h1>Bud Buddie</h1>
-
-<h2>Your Personal Cannabis Guide</h2>
-
-<p>
-Helping cannabis consumers discover products, understand cannabis,
-find deals, and shop with confidence through personalized guidance
-and community-driven feedback.
+<img src="logo.PNG" class="logo" alt="Bud Buddie">
+<p class="intro">
+Bud Buddie is a virtual budtender concept built to make cannabis shopping easier, more personalized, and less overwhelming.
 </p>
-
-<div class="button-group">
-
-<a href="mailto:my.bud.buddie.420@gmail.com" class="btn primary">
-Join The Beta
-</a>
-
-<a href="mailto:my.bud.buddie.420@gmail.com" class="btn secondary">
+<h1>
+Your Personal Cannabis Guide
+</h1>
+<p class="hero-text">
+We're building a smarter way for cannabis consumers to discover products, understand strains, learn about cannabis, find deals, and navigate dispensaries with confidence.
+</p>
+<a href="mailto:my.bud.buddie.420@gmail.com" class="btn">
 Share Feedback
 </a>
-
 </div>
-
-</div>
-
 </section>
-
-<section class="section">
-
-<h2 class="section-title">
-Why Bud Buddie?
-</h2>
-
-<div class="cards">
-
-<div class="card">
-<h3>Personalized Recommendations</h3>
+<section class="glass-section">
+<h2>Why Bud Buddie?</h2>
 <p>
-Get product suggestions based on your goals,
-preferences, and experience level.
+Cannabis consumers often face hundreds of products, inconsistent information, and little personalized guidance. Bud Buddie aims to bridge that gap by combining education, recommendations, community feedback, and technology into one easy-to-use experience.
 </p>
-</div>
-
-<div class="card">
-<h3>Product Discovery</h3>
-<p>
-Explore strains, concentrates, edibles,
-and new products with confidence.
-</p>
-</div>
-
-<div class="card">
-<h3>Deal Alerts</h3>
-<p>
-Stay informed about promotions,
-specials, and favorite products.
-</p>
-</div>
-
-<div class="card">
-<h3>Cannabis Education</h3>
-<p>
-Learn about cannabinoids, terpenes,
-effects, and responsible consumption.
-</p>
-</div>
-
-</div>
-
 </section>
-
-<section class="section">
-
-<h2 class="section-title">
-Built With Community Input
-</h2>
-
-<p class="mission">
-Bud Buddie is being shaped with feedback from consumers,
-budtenders, managers, and dispensary professionals.
-Our goal is simple: make cannabis easier to understand,
-less overwhelming, and more accessible for everyone.
-</p>
-
-</section>
-
 <footer>
-
-<p>
 Bud Buddie © 2026
-</p>
-
-<p style="margin-top:15px;">
-Contact:
-<a href="mailto:my.bud.buddie.420@gmail.com"
-style="color:#46e0c4;">
-my.bud.buddie.420@gmail.com
-</a>
-</p>
-
 </footer>
-
 </body>
 </html>
