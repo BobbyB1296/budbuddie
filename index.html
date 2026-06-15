@@ -1,126 +1,282 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Bud Buddie</title>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Bud Buddie | Your Personal Cannabis Guide</title>
+
 <style>
-body {
+* {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: #081c15;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
     color: white;
+    background:
+        linear-gradient(
+            rgba(0,0,0,.75),
+            rgba(0,0,0,.80)
+        ),
+        url('background.PNG');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    padding: 80px 20px;
-    background: linear-gradient(to bottom, #1b4332, #081c15);
+    padding: 40px 20px;
+}
+
+.hero-content {
+    max-width: 900px;
+}
+
+.logo {
+    width: 220px;
+    max-width: 80%;
+    margin-bottom: 25px;
 }
 
 .hero h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
+    font-size: 4rem;
+    margin-bottom: 15px;
+    font-weight: 800;
 }
 
 .hero h2 {
-    color: #95d5b2;
+    color: #46e0c4;
+    font-size: 1.5rem;
     margin-bottom: 30px;
+    font-weight: 400;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    max-width: 700px;
+    margin: 0 auto 40px;
+    color: #d7f8f0;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 15px 28px;
+    border-radius: 999px;
+    font-weight: bold;
+    transition: .3s ease;
+}
+
+.primary {
+    background: #e8ae6a;
+    color: #111;
+}
+
+.secondary {
+    border: 2px solid #46e0c4;
+    color: #46e0c4;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
 }
 
 .section {
-    max-width: 900px;
+    max-width: 1100px;
     margin: auto;
-    padding: 50px 20px;
+    padding: 80px 20px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.4rem;
+    margin-bottom: 40px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 25px;
 }
 
 .card {
-    background: #1b4332;
-    padding: 25px;
-    border-radius: 15px;
-    margin-bottom: 20px;
+    background: rgba(20, 30, 25, .72);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(70,224,196,.2);
+    border-radius: 20px;
+    padding: 30px;
 }
 
-.button {
-    display: inline-block;
-    background: #f4a261;
-    color: white;
-    text-decoration: none;
-    padding: 15px 25px;
-    border-radius: 999px;
-    font-weight: bold;
+.card h3 {
+    color: #46e0c4;
+    margin-bottom: 15px;
 }
 
-.button:hover {
-    opacity: .9;
+.card p {
+    line-height: 1.7;
+    color: #d7f8f0;
+}
+
+.mission {
+    text-align: center;
+    max-width: 850px;
+    margin: auto;
+    line-height: 1.9;
+    font-size: 1.1rem;
 }
 
 footer {
     text-align: center;
-    padding: 30px;
-    color: #95d5b2;
+    padding: 50px 20px;
+    border-top: 1px solid rgba(255,255,255,.1);
+    color: #9ddfce;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:2.6rem;
+}
+
+.hero h2{
+    font-size:1.2rem;
+}
+
+.logo{
+    width:180px;
+}
+
 }
 </style>
 </head>
 
 <body>
 
-<div class="hero">
-    <h1>🌿 Bud Buddie</h1>
-    <h2>Your Virtual Budtender</h2>
+<section class="hero">
 
-    <p>
-    Making cannabis easier to understand,
-    more personalized, and less overwhelming.
-    </p>
+<div class="hero-content">
 
-    <br>
+<img src="logo.PNG" alt="Bud Buddie Logo" class="logo">
 
-    <a class="button" href="mailto:my.bud.buddie.420@gmail.com">
-        Help Shape Bud Buddie
-    </a>
-</div>
+<h1>Bud Buddie</h1>
 
-<div class="section">
+<h2>Your Personal Cannabis Guide</h2>
 
-    <div class="card">
-        <h2>Our Mission</h2>
+<p>
+Helping cannabis consumers discover products, understand cannabis,
+find deals, and shop with confidence through personalized guidance
+and community-driven feedback.
+</p>
 
-        <p>
-        Bud Buddie is a community-driven project exploring how technology
-        can help cannabis consumers discover products, learn about cannabis,
-        find deals, and navigate dispensaries with confidence.
-        </p>
-    </div>
+<div class="button-group">
 
-    <div class="card">
-        <h2>What We're Learning</h2>
+<a href="mailto:my.bud.buddie.420@gmail.com" class="btn primary">
+Join The Beta
+</a>
 
-        <ul>
-            <li>Customers want personalized recommendations.</li>
-            <li>People want alerts for deals and favorite products.</li>
-            <li>Some users prefer human interaction over automation.</li>
-            <li>Dispensaries want better customer education.</li>
-            <li>Trust and transparency matter.</li>
-        </ul>
-    </div>
-
-    <div class="card">
-        <h2>Share Your Ideas</h2>
-
-        <p>
-        We're actively collecting feedback from customers,
-        budtenders, managers, and dispensary owners.
-        </p>
-
-        <a class="button" href="mailto:my.bud.buddie.420@gmail.com">
-            Send Feedback
-        </a>
-    </div>
+<a href="mailto:my.bud.buddie.420@gmail.com" class="btn secondary">
+Share Feedback
+</a>
 
 </div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 class="section-title">
+Why Bud Buddie?
+</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Personalized Recommendations</h3>
+<p>
+Get product suggestions based on your goals,
+preferences, and experience level.
+</p>
+</div>
+
+<div class="card">
+<h3>Product Discovery</h3>
+<p>
+Explore strains, concentrates, edibles,
+and new products with confidence.
+</p>
+</div>
+
+<div class="card">
+<h3>Deal Alerts</h3>
+<p>
+Stay informed about promotions,
+specials, and favorite products.
+</p>
+</div>
+
+<div class="card">
+<h3>Cannabis Education</h3>
+<p>
+Learn about cannabinoids, terpenes,
+effects, and responsible consumption.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 class="section-title">
+Built With Community Input
+</h2>
+
+<p class="mission">
+Bud Buddie is being shaped with feedback from consumers,
+budtenders, managers, and dispensary professionals.
+Our goal is simple: make cannabis easier to understand,
+less overwhelming, and more accessible for everyone.
+</p>
+
+</section>
 
 <footer>
+
+<p>
 Bud Buddie © 2026
+</p>
+
+<p style="margin-top:15px;">
+Contact:
+<a href="mailto:my.bud.buddie.420@gmail.com"
+style="color:#46e0c4;">
+my.bud.buddie.420@gmail.com
+</a>
+</p>
+
 </footer>
 
 </body>
